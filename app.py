@@ -53,15 +53,27 @@ def update_user(id):
     if 'password' in data:
         user.password = data.get('password')
 
+    db.session.commit()
+    return make_response(user.to_dict(), 200)
+
+@app.route('/users/<int:id>', methods=['DELETE'])
+def delete_user(id):
+    user = User.query.get(id)
+    if not user:
+        return make_response({'error': f'User deleted sucessfull'}, 404)
+    db.session.delete(user)
+    db.session.commit()
+    return make_response({}, 204)
 
 
 
 
 
 
-# @app.route('/')
-# def index():
-#     return '<h1>INTRODUCTION TO FLASK APP</h1>'
+
+@app.route('/')
+def index():
+    return '<h1>INTRODUCTION TO FLASK APP</h1>'
 
 # @app.route('/about')
 # def about():
