@@ -26,7 +26,7 @@ class User(db.Model, SerializerMixin):
     # one user has many posts
     posts = db.relationship('Post', back_populates='user', lazy=True)
 
-    
+
 
     def __repr__(self):
         return f'<User {self.id}, {self.username}, {self.email}>'
@@ -62,7 +62,7 @@ class Course(db.Model, SerializerMixin):
     # many to many relationship with Student
     students = db.relationship('Student', secondary=student_courses, back_populates='courses')
 
-    
+
 
     # {
     # "username" : "Jabir":
@@ -91,4 +91,3 @@ class Course(db.Model, SerializerMixin):
 
 
 
-    

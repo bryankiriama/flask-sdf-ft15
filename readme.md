@@ -1,6 +1,6 @@
 flask => light weight microframework
 <!-- how hweb works -->
-client  => request    response <= server   wsgi      flask/python application 
+client  => request    response <= server   wsgi      flask/python application
 
 http => GET, POST, PUT, PATCH, DELETE
 STATUS CODE => 100, 200, 300, 400, 500
@@ -27,5 +27,8 @@ seerialize data
 
  <!-- this is to avoid recursion depth -->
 
- 
- 
+
+ API ENDPOINTS
+ <!-- Users -->
+
+ GET / USERS 
