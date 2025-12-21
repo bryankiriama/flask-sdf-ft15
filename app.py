@@ -75,9 +75,9 @@ def delete_user(id):
 def index():
     return '<h1>INTRODUCTION TO FLASK APP</h1>'
 
-@app.route('/about')
-def about():
-    return '<h3>This is now about us page</h3>'
+# @app.route('/about')
+# def about():
+#     return '<h3>This is now about us page</h3>'
 
 # @app.route('/profile/<string:username>')
 # def profile(username):
